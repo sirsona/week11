@@ -12,5 +12,8 @@ router.get("/webhook", (req, res) => {
   }
   return res.sendStatus(403);
 });
-
+router.post("/webhook", express.json(), (req, res) => {
+  console.log("Incoming WhatsApp update:", JSON.stringify(req.body, null, 2));
+  res.sendStatus(200);
+});
 module.exports = router;
