@@ -1,3 +1,113 @@
+# Node.js dependencies
 node_modules/
+npm-debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Environment variables
 .env
-data
+.env.local
+.env.production
+.env.development
+.env.test
+.env.example
+
+# Database files
+db/*.db
+db/*.db-journal
+db/*.db-shm
+db/*.db-wal
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+
+# Logs
+logs/
+*.log
+logs/
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# VS Code settings (if you want to keep workspace settings)
+.vscode/
+!.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+*.class
+*.pyc
+*.pyo
+__pycache__/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.Trash-*
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Backup files
+*.bak
+*.old
+*.tmp
+*.temp
+*.backup
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# System files
+*.swp
+*.swo
+*~
+*.lock
+
+# Audit report (keep this tracked)
+# AI_AUDIT.md is kept tracked since it's a documentation file
+
+# Screenshots (keep these tracked if you want them in the repo)
+# screenshots/ - keep these for submission
+
+# Specific to your project
+# Remove these if you want to track the database for demo purposes
+# db/leads.db - keep or ignore based on preference
+
+# To keep the database for demo purposes, comment out the line below
+db/leads.db
