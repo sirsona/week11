@@ -33,3 +33,26 @@
 
 - Classification: Repeated integration pattern.
 - Hand-typed
+
+## Day 3 Split log
+
+### Feature: Database schema
+
+- Classification: New-tech-adjacent, manual.
+- Hand-typed
+
+### Feature: Phone-to-lead mapping
+
+- Classification: Manual.
+- connected the WhatsApp bot to the database and handled the conversation flow.
+
+### Feature: CRUD routes
+
+Classification: Manual
+
+- wrote the Express route structure and SQL queries using the notes and examples as reference.
+
+### Feature: Pagination and search
+
+- Classification: Manual
+- Used my notes and examples
