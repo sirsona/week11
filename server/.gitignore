@@ -1,0 +1,66 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+.env.example
+
+# Database files
+db/*.db
+db/*.db-journal
+db/*.db-shm
+db/*.db-wal
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+
+# Logs
+logs/
+*.log
+logs/
+*.log
+
+
+# VS Code settings (if you want to keep workspace settings)
+.vscode/
+!.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Backup files
+*.bak
+*.old
+*.tmp
+*.temp
+*.backup
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# System files
+*.swp
+*.swo
+*~
+*.lock
+
+
