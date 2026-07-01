@@ -18,7 +18,7 @@ function saveConversation(leadId, state, data) {
       data = ?,
       updated_at = datetime('now')
     WHERE lead_id = ?
-  `,
+  `
   ).run(state, JSON.stringify(data), leadId);
 }
 
@@ -29,7 +29,7 @@ function updateLeadField(leadId, field, value) {
     UPDATE leads
     SET ${field} = ?, updated_at = datetime('now')
     WHERE id = ?
-  `,
+  `
   ).run(value, leadId);
 }
 
@@ -51,7 +51,7 @@ function handleMessage({ from, text }) {
 
   if (!conversation) {
     db.prepare(
-      `INSERT INTO conversations (id, lead_id, state, data) VALUES (?, ?, ?, ?)`,
+      `INSERT INTO conversations (id, lead_id, state, data) VALUES (?, ?, ?, ?)`
     ).run(uuidv4(), lead.id, STATES.GREETING, JSON.stringify({}));
   }
 
@@ -67,7 +67,7 @@ function handleMessage({ from, text }) {
     `
     INSERT INTO messages (id, lead_id, direction, body)
     VALUES (?, ?, ?, ?)
-  `,
+  `
   ).run(uuidv4(), lead.id, "in", text);
 
   // State machine
@@ -104,7 +104,7 @@ function handleMessage({ from, text }) {
     `
     INSERT INTO messages (id, lead_id, direction, body)
     VALUES (?, ?, ?, ?)
-  `,
+  `
   ).run(uuidv4(), lead.id, "out", reply);
 
   return reply;

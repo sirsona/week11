@@ -1,1 +1,18 @@
-{}
+{
+  "name": "whatsapp-crm",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:backend": "npm run dev -w @crm/backend",
+    "dev:frontend": "npm run dev -w @crm/frontend",
+    "dev": "concurrently \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "format": "prettier --write .",
+    "check-format": "prettier --check ."
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "prettier": "^3.9.4"
+  }
+}

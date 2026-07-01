@@ -38,7 +38,7 @@ router.post("/webhook", async (req, res) => {
   } catch (error) {
     console.error(
       "Failed to send reply:",
-      error.response?.data || error.message,
+      error.response?.data || error.message
     );
   }
 

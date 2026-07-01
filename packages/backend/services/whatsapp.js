@@ -14,7 +14,7 @@ async function sendMessage(to, text) {
       headers: {
         Authorization: `Bearer ${process.env.META_ACCESS_TOKEN}`,
       },
-    },
+    }
   );
 }
 

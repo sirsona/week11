@@ -109,7 +109,7 @@ router.patch("/lead/:id", (req, res) => {
   params.push(id);
 
   db.prepare(`UPDATE leads SET ${fields.join(", ")} WHERE id = ?`).run(
-    ...params,
+    ...params
   );
 
   const updated = db
@@ -132,7 +132,7 @@ router.get("/stats", (req, res) => {
         COUNT(*) AS n
       FROM leads
       GROUP BY status
-    `,
+    `
     )
     .all();
 
