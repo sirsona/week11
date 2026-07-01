@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 
 const {
   router: whatsappRoutes,
@@ -9,6 +10,7 @@ const {
 const apiRoute = require("./routes/leads");
 
 const app = express();
+app.use(cors());
 
 app.use("/", express.json({ verify: verifySignature }));
 

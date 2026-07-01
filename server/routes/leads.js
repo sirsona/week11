@@ -53,7 +53,7 @@ router.get("/leads", (req, res) => {
 
 // GET /api/leads/:id
 
-router.get("/leads/:id", (req, res) => {
+router.get("/lead/:id", (req, res) => {
   const { id } = req.params;
 
   const lead = db.prepare("SELECT * FROM leads WHERE id = ?").get(id);
@@ -68,17 +68,17 @@ router.get("/leads/:id", (req, res) => {
 
   const messages = db
     .prepare("SELECT * FROM messages WHERE lead_id = ?")
-    .get(id);
+    .all(id);
 
   res.json({
-    ...lead,
-    conversation: conversation || null,
+    lead,
+    conversation,
     messages,
   });
 });
 
 // PATCH /api/leads/:id
-router.patch("/leads/:id", (req, res) => {
+router.patch("/lead/:id", (req, res) => {
   const { id } = req.params;
   const { status, notes, name, email } = req.body;
   const lead = db.prepare("SELECT * FROM leads WHERE id = ?").get(id);
